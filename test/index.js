@@ -46,9 +46,13 @@ describe('express-websocket', function () {
 
   it('should open connection', function (done) {
     ws = new wsocket('ws://localhost:3000/websocket');
-    ws.on('open', done);
+    ws.on('open', function(){
+        ws.close();
+        done();
+    });
   });
   it('should receive hello', function (done) {
+    ws = new wsocket('ws://localhost:3000/websocket');
     ws.on('message', function (msg) {
       expect(msg).to.equal('hello');
       done();

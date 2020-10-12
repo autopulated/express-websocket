@@ -7,9 +7,8 @@
     "test": "test"
   },
   "dependencies": {
-    "chai": "^2.3.0",
     "express": "^4.12.4",
-    "ws": "^2.2.0"
+    "ws": "^3.3.3"
   },
   "devDependencies": {
     "chai": "^2.3.0",
